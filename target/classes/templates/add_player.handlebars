@@ -1,0 +1,40 @@
+{{> header.handlebars }}
+<main role="main" class="expand">
+    <div class="container my-5">
+        <form action="/add/player" method="post">
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="first-name">First Name</label>
+                    <input type="text" class="form-control" id="first-name" placeholder="Lionel">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="last-name">Last Name</label>
+                    <input type="text" class="form-control" id="last-name" placeholder="Messi">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-4">
+                    <label for="field-position">Field Position</label>
+                    <select id="field-position" class="form-control" name="field-position">
+                        <option selected>Preferred playing position</option>
+                        {{#each positions}}
+                            <option value="{{positionId}}">{{positionName}}</option>
+                        {{/each}}
+                    </select>
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="team">Team</label>
+                    <select id="team" class="form-control" name="team">
+                        {{#each team}}
+                            <option value="{{teamId}}">{{teamName}}</option>
+                        {{/each}}
+                    </select>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Add Player</button>
+        </form>
+    </div>
+</main>
+
+
+{{> footer.handlebars}}

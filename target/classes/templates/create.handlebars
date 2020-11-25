@@ -1,0 +1,32 @@
+{{> header.handlebars}}
+<main role="main" class="expand">
+    <div class="container my-5">
+        <div class="row mb-5">
+            <div class="col-lg-4 offset-lg-1 text-center funny-btn card">
+                <form action="/create/team" method="GET">
+                    <button type="submit" class="btn btn-info">Create Teams</button>
+                </form>
+            </div>
+            <div class="col-lg-4 offset-lg-1 text-center funny-btn card">
+                <form action="/create/league" method="GET">
+                    <button type="submit" class="btn btn-info">Create Leagues</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="row mb-5">
+            <div class="col-lg-4 offset-lg-1 text-center funny-btn card">
+                <form action="/add/player" method="GET">
+                    <button type="submit" class="btn btn-info">Add Player</button>
+                </form>
+            </div>
+            <div class="col-lg-4 offset-lg-1 text-center funny-btn card">
+                <form action="/add/team" method="GET">
+                    <button type="submit" class="btn btn-info">Add Team To League</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</main>
+
+{{> footer.handlebars}}

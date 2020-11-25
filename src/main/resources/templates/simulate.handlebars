@@ -1,0 +1,33 @@
+{{> header.handlebars}}
+<main role="main" class="expand">
+    <div class="container my-5">
+        <div class="row mb-5">
+            <div class="col-lg-10 offset-lg-1 text-center funny-btn card">
+                <form action="/simulate/season" method="post">
+                    <div class="form-row">
+                        <div class="col-lg-6 mx-auto my-3">
+                            <label for="select-league">Select League</label>
+                            <select id="select-league" name="league-id" class="form-control">
+                                {{#each league}}
+                                    <option value="{{leagueId}}">{{leagueName}}</option>
+                                {{/each}}
+                            </select>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-info">Simulate a Season</button>
+                </form>
+            </div>
+        </div>
+        {{#if finished}}
+            <div class="row mb-5">
+                <div class="col-lg-4 offset-lg-1 text-center funny-btn card">
+                    <form action="/standings" method="get">
+                        <button type="submit" class="btn btn-info">View Season Standings</button>
+                    </form>
+                </div>
+            </div>
+        {{/if}}
+    </div>
+</main>
+
+{{> footer.handlebars}}

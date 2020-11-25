@@ -1,0 +1,26 @@
+{{> header.handlebars}}
+<main role="main" class="expand">
+    <div class="container my-5">
+        <form action="/create/team" method="post" class="needs-validation" novalidate>
+            <div class="form-row">
+                <div class="col-md-6 mb-3">
+                    <label for="validationCustom01">Club Name</label>
+                    <input type="text" class="form-control" id="validationCustom01" name="team-name" placeholder="The name of the footbal club" required>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="validationCustom02">Total Players</label>
+                    <input type="number" class="form-control" id="validationCustom02"  name="number-of-players" placeholder="How many players does the team have?"required>
+                    <div class="valid-feedback">
+                        11+ Players
+                    </div>
+                </div>
+            </div>
+
+            <button class="btn btn-primary" type="submit">Create Team</button>
+        </form>
+    </div>
+</main>
+{{> footer.handlebars}}

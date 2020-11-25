@@ -1,0 +1,28 @@
+{{> header.handlebars}}
+<main role="main" class="expand">
+    <div class="container my-5">
+        <form action="/add/team" method="post">
+            <div class="form-row my-3">
+                <div class="col-lg-6">
+                    <label for="select-team">Select Team</label>
+                    <select id="select-team" name="team-id" class="form-control form-control-lg">
+                        {{#each team}}
+                            <option value="{{teamId}}">{{teamName}}</option>
+                        {{/each}}
+                    </select>
+                </div>
+                <div class="col-lg-6">
+                    <label for="select-league">Select League</label>
+                    <select id="select-league" name="league-id" class="form-control form-control-lg">
+                        {{#each league}}
+                            <option value="{{leagueId}}">{{leagueName}}</option>
+                        {{/each}}
+                    </select>
+                </div>
+            </div>
+            <button class="btn btn-primary" type="submit">Add team to League</button>
+        </form>
+    </div>
+</main>
+{{> footer.handlebars}}
+
